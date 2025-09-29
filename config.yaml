@@ -1,0 +1,19 @@
+project_name: cur-migrate-poc
+
+aws:
+  profile: cur-migrate
+  region: us-east-1
+
+cur:
+  bucket: cur-695166363537-test
+  month_prefix: hourly/cur-695166363537/20240801-20240901/
+  old_payer_id: "376443268082"
+  new_payer_id: "695166363537"
+
+run:
+  slice: "20240818T190636Z"
+  dry_run: false
+  max_workers: 8
+  staging_prefix: ""     # leave empty for now
+  delete_originals: false
+  verify_etag: false
